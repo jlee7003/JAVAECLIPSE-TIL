@@ -12,7 +12,7 @@ public class date507_2main
 			
 			aa.add2();
 		
-			int hap=aa.output();
+			int hap=aa.output(); //aa.hap; 직접 접근 불가 상태
 			
 			System.out.println("메인 :"+hap);
 			
