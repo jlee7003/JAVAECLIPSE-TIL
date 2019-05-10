@@ -10,7 +10,9 @@ public class date509_21
 	{
 		for(int i=0;i<lotto.length;i++)
 		{
-			lotto[i]=(int)(Math.random()*45)+1;
+			lotto[i]=(int)(Math.random()*45)+1; //Math.random은 0에서 1부터의 값 * 45 
+			                                     // =0~44
+			                                     // (int)(0~44)-> 실수부 다 날라감
 		}
 		
 	}
