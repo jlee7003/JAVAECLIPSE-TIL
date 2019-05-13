@@ -20,8 +20,9 @@ public class date513_3
 		sci=sc.nextInt();
 		
 	}
-		public void stand2(int sss,String str)
-		{
+		public void stand2(int sss,String str)//출력, 계산 ()안의 sss와 str은 
+		                                     // 함수 안의 변수로 취급
+		{                                    //매게변수 값을 받아서 전달해주는 변수
 		
 			if(sss>=90)
 			{
@@ -52,11 +53,11 @@ public class date513_3
 		}
 		
 		
-	public void stand3()
+	public void stand3_exe() //함수 실행
 	  {
 		
 		
-		stand2(kor,"국어"); 
+		stand2(kor,"국어"); //함수 실행 명령어 암기할것
 	    stand2(mat,"수학"); 
 		stand2(eng,"영어"); 
 		stand2(sci,"과학"); 
