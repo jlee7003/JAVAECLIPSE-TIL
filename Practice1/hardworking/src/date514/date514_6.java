@@ -11,7 +11,7 @@ public class date514_6
 		for(int i=0;i<arr.length;i++)
 		{
 			arr[i]=(int)(Math.random()*6)+1;
-            sum=sum+arr[i];
+            sum=sum+arr[i]; //값의 누적
             
 		}
 
