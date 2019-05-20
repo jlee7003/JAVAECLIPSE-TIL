@@ -1,5 +1,6 @@
 package date520;
 
-public class date520_5 {
+public class date520_5
+{
 
 }

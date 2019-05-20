@@ -9,7 +9,7 @@ public class date520_main3
 		aa.output();
 		date520_3 bb=new date520_3(99);
 		bb.output();
-		date520_3 cc=new date520_3(99,88);
+		date520_3 cc=new date520_3(1,100);
 		cc.output();
 
 	}
