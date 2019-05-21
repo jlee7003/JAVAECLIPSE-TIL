@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class date515_2
+public class a2�߹迭
 {
 
 	public static void main(String[] args)
