@@ -12,6 +12,7 @@ public class a2중배열
      {
     	 for(int j=0;j<3;j++)
     	 {
+    		 System.out.println("값을 입력하십시오");
     		 sung[i][j]=sc.nextInt();
     	 }
      }
