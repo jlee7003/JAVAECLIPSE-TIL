@@ -1,6 +1,9 @@
+package src;
+
 import java.util.Scanner;
 public class date509_16 
 {
+	
 	//16. Scanner로 n이라는 변수에 값을 입력받은 후 
     //1부터 n 까지의 합을 구하시오.
 	
