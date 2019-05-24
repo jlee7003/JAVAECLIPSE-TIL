@@ -11,4 +11,5 @@ public class Const1_Main
 		// 객체를 인스턴스화
 		// c1 => 객체변수,클래스변수
 	}
+	
 }
