@@ -5,7 +5,7 @@ public class father_main
 
 	public static void main(String[] args) 
 	{
-		father aa=new father();
+		Father aa=new Father();
 		
 		aa.chul();
 		aa.aaa();
