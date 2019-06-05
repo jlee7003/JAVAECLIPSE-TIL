@@ -2,6 +2,8 @@ package date529;
 
 public class lotto
 {
+	public static int length;
+
 	public void cal() 
 	{
 		

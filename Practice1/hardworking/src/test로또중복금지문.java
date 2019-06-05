@@ -1,3 +1,5 @@
+package src;
+
 import java.util.Scanner;
 public class test로또중복금지문
 { 
@@ -14,7 +16,7 @@ public class test로또중복금지문
 			for(int j=0;j<=i-1;j++)
 			  {
 				 
-				  if(lotto[j]==lotto[i])
+				  if(lotto[j]>lotto[i])
 				  {
 					  i=i-1;
 				  }
