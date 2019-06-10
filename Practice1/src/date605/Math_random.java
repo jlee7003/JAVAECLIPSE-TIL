@@ -11,7 +11,7 @@ public class Math_random
 		int lot[]=new int[6];
 		int num =0;
 		
-	
+		
 			for(int i=0;i<lot.length;i++)
 			{
 				lot[i]=(int)(Math.random()*45)+1;
