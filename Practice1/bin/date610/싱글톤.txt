@@ -1,0 +1,23 @@
+class Calendar
+{
+  private Calendar() // 积己磊啊 private
+  { 
+
+  }
+  public static Calendar getInstance()
+  {
+    Calendar today=new Calendar();
+    return today;
+  }
+}
+
+
+// 教臂沛 按眉积己规过
+
+public class ddd
+{
+  public static void main()
+  {
+    Calendar today=Calendar.getInstance();
+  {
+}
