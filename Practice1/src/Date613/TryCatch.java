@@ -39,7 +39,12 @@ public class TryCatch
 		{
 			System.out.println("0으로는 나눌 수 없습니다.");
 		}
-		finally
+		catch(Exception e) //에러를 다 구분해주고 예상하지 못한 에러를 걸러내는 법
+		                   //단 Exception은 무조건 마지막 catch에다가 사용해야함->아니면 다 Exception에 걸러짐
+		{
+			System.out.println("에러는 났지만 무슨 에러인지는 모른다.");
+		}
+		finally //마지막 실행구문 예외이든 아니든 무조건 실행됨
 		{
 			System.out.println("finally입니다");
 		}
