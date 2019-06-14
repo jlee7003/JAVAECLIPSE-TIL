@@ -1,4 +1,4 @@
-package date522;
+package Static_instance_Singletone;
 
 public class date522_1
 {
@@ -20,6 +20,7 @@ public class date522_1
 	  this.kor=kor;
 	  age=11; //age가 스태틱임에도 인스턴스 함수이기에 객체를 만들어도 상관이 없음
 	          //객체란 변수를 만들어 따로따로 일을 하는것을 뜻함
+	  System.out.println(kor);
   }
 	 
   public static void sogae()

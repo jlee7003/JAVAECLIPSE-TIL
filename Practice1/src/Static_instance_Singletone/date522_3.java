@@ -1,4 +1,4 @@
-package date522;
+package Static_instance_Singletone;
 
 public class date522_3 
 {

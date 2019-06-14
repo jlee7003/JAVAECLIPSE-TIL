@@ -1,4 +1,4 @@
-package date522;
+package Static_instance_Singletone;
 
 public class date522_main1 
 {
@@ -14,6 +14,10 @@ public class date522_main1
 		
 		date522_1.sogae();
 		
+		date522_1 aa= new date522_1();
+		
+		aa.input(4);
+		aa.sogae(); //
 	}
 
 }

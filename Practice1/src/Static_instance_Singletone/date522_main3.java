@@ -1,4 +1,4 @@
-package date522;
+package Static_instance_Singletone;
 
 import java.util.Calendar;
 
