@@ -2,8 +2,8 @@
 
 <h2>·기초개념(class,method,comment)</h2><p>
 	
-	uk 
    <b>-class</b> <p>
+	
     public-> 이 클래스는 누구든지 사용가능
     class-> 클래스를 선언하는 명령어
     Hello-> 내가 정한 클래스의 이름
@@ -39,9 +39,26 @@
   
 <h2>·배열 선언하기(변수명 함수변수=new 변수명)</h2> <p>
 	
-	·
+	·int 배열명[] = new int[배열크기]; 
   
 <h2>·이중배열 사용하기</h2> <p>
+	
+	public static void main(String[] args)
+	
+     }
+     //2중행렬 범위 설정
+     int sung[][]=new int[5][3]; => 5행, 3열
+     int sum=0;
+     Scanner sc=new Scanner(System.in);
+     //2중행렬 값 입력
+     for(int i=0;i<3;i++)
+     {
+    	 for(int j=0;j<3;j++)
+    	 {
+    		 System.out.println("값을 입력하십시오");
+    		 sung[i][j]=sc.nextInt();
+    	 }
+     }
   
 <h2>·overloading</h2> <p>
   
