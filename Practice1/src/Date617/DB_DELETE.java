@@ -10,7 +10,7 @@ public class DB_DELETE
 {
 	public static void main(String[] args) throws SQLException 
 	{
-		 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/java?useSSL=false","root","apmsetup");
+		 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/ee5?useSSL=false","root","1234");
 		 Scanner sc=new Scanner(System.in);
 		 Statement stmt=conn.createStatement();
 		 System.out.print("몇번 레코드를 지울껀가요? :");

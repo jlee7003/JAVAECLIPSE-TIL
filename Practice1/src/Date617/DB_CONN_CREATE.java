@@ -14,11 +14,11 @@ public class DB_CONN_CREATE
 	 public static void main(String[] args) throws SQLException//메인함수는 가상머신
 	 {
 		 
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/java?useSSL=false","root","apmsetup");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/ee5?useSSL=false","root","1234");
 		
 			Statement stmt=conn.createStatement();
 			
-			String sql="create table test(aa int)";
+			String sql="create table member(id int auto_increment primary key, name char(20), phone char(30), age int, juso char(50))";
 			
 			stmt.executeUpdate(sql);
 			
