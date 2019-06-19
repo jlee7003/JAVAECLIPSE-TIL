@@ -14,7 +14,7 @@ public class DB_CONN_CREATE
 	 public static void main(String[] args) throws SQLException//메인함수는 가상머신
 	 {
 		 
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/ee5?useSSL=false","root","1234");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/java?useSSL=false","root","1234");
 		
 			Statement stmt=conn.createStatement();
 			
