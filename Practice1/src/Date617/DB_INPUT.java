@@ -8,9 +8,9 @@ public class DB_INPUT
 	public static void main(String[] args) throws SQLException 
 	{
 		 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/java?useSSL=false","root","1234");
-		 Scanner sc=new Scanner(System.in);
 		 Statement stmt=conn.createStatement();
-		 
+			 
+		 Scanner sc=new Scanner(System.in);
 		 System.out.print("이름을 입력해주세요 :");
 		 String nameI = sc.next();
 		//sc.nextLine();-> 비어있는 값이 있을 경우 입력

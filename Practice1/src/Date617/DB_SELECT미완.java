@@ -30,6 +30,8 @@ public class DB_SELECT미완
 		                     //10칸 짜리 문자열로 출력하라 %는 s가 문자열임을 표현
 		for(int i=1;i<=len;i++)
 		{
+		System.out.printf("%15s",rs.getString("id"));
+		System.out.print("/");
 		System.out.printf("%15s",rs.getString("name"));
 		System.out.print("/");
 		System.out.printf("%15s",rs.getString("phone"));
