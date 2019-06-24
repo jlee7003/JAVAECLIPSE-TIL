@@ -91,7 +91,7 @@
   
 <h2>·SimpleDate, SimpleDateFormet class(날짜형식), TimeZone class</h2> <p>
 	
-<h2> 전역변수, 지역변수 <h2>
+<h2> 전역변수, 지역변수 </h2><p>
 	
      ->같은 클래스 안에서 함수를 만들고 클래스 안에 변수를 만들었을때 위치에 따라 변수의 값이 정해지는 것 
        ex) public class exex
