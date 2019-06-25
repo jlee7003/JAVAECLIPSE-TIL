@@ -6,12 +6,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 public class DB_CONN_CREATE 
 {
-	//java.sql.* -> java¿¡¼­ sql°ú °ü·ÃµÈ API
-    //connection class -> java¿¡¼­ Á¦°øµÇ´Â API -> DB¼­¹ö¿Í ¿¬°á
-	//Statement class -> Äõ¸®¹®ÀÇ ½ÇÇà
-	//Resultset class -> DB¿¡ ÀÖ´Â Å×ÀÌºíÀÇ ³»¿ëÀ» °¡Á®¿Í¼­ ÀúÀåÇÏ´Â °÷
-	                 //  ÇÁ·Î±×·¥¿¡¼­ »ç¿ëÇÒ ¸ñÀûÀ¸·Î »ç¿ëµÇ´Â °ø°£
-	 public static void main(String[] args) throws SQLException//¸ÞÀÎÇÔ¼ö´Â °¡»ó¸Ó½Å
+	//java.sql.* -> javaì—ì„œ sqlê³¼ ê´€ë ¨ëœ API
+    //connection class -> javaì—ì„œ ì œê³µë˜ëŠ” API -> DBì„œë²„ì™€ ì—°ê²°
+	//Statement class -> ì¿¼ë¦¬ë¬¸ì˜ ì‹¤í–‰
+	//Resultset class -> DBì— ìžˆëŠ” í…Œì´ë¸”ì˜ ë‚´ìš©ì„ ê°€ì ¸ì™€ì„œ ì €ìž¥í•˜ëŠ” ê³³
+	                 //  í”„ë¡œê·¸ëž¨ì—ì„œ ì‚¬ìš©í•  ëª©ì ìœ¼ë¡œ ì‚¬ìš©ë˜ëŠ” ê³µê°„
+	 public static void main(String[] args) throws SQLException//ë©”ì¸í•¨ìˆ˜ëŠ” ê°€ìƒë¨¸ì‹ 
 	 {
 		 
 			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/java?useSSL=false","root","1234");
@@ -22,46 +22,46 @@ public class DB_CONN_CREATE
 			
 			stmt.executeUpdate(sql);
 			
-			stmt.close();//µ¥ÀÌÅÍ Ä¿³Ø¼ÇÀ» ´Ý¾ÆÁÖ±â À§ÇÑ ¸í·É¾î
-			conn.close();//µ¥ÀÌÅÍ Ä¿³Ø¼ÇÀ» ´Ý¾ÆÁÖ±â À§ÇÑ ¸í·É¾î
+			stmt.close();//ë°ì´í„° ì»¤ë„¥ì…˜ì„ ë‹«ì•„ì£¼ê¸° ìœ„í•œ ëª…ë ¹ì–´
+			conn.close();//ë°ì´í„° ì»¤ë„¥ì…˜ì„ ë‹«ì•„ì£¼ê¸° ìœ„í•œ ëª…ë ¹ì–´
 			
-		 //ÀÌÅ¬¸³½º¿¡¼­ ¿¹¿Ü°¡ ¹ß»ýÇÒ¼ö ÀÖÀ½À» °æ°í ¿¡·¯°¡ ¾Æ´Ô
+		 //ì´í´ë¦½ìŠ¤ì—ì„œ ì˜ˆì™¸ê°€ ë°œìƒí• ìˆ˜ ìžˆìŒì„ ê²½ê³  ì—ëŸ¬ê°€ ì•„ë‹˜
 		 
-		 /* ¿¹¿ÜÃ³¸®
+		 /* ì˜ˆì™¸ì²˜ë¦¬
 		  * 
-		  * public void ÇÔ¼ö()
+		  * public void í•¨ìˆ˜()
 		  * {
-		  *    ½ÇÇà¹®: ¿¹¿Ü°¡ ¹ß»ýÇÒ ¼ö ÀÖ´Â ¹®ÀåÀÏ °æ¿ì -> ¿¹¿ÜÃ³¸® ¹æ¹ý ¼­¼ú
+		  *    ì‹¤í–‰ë¬¸: ì˜ˆì™¸ê°€ ë°œìƒí•  ìˆ˜ ìžˆëŠ” ë¬¸ìž¥ì¼ ê²½ìš° -> ì˜ˆì™¸ì²˜ë¦¬ ë°©ë²• ì„œìˆ 
 		  * }
-		  * 1. try-catch¹®À» ÅëÇØ¼­ (¿¹¿Ü¹ß»ý½Ã ÇÁ·Î±×·¥ Á¾·á -> ÇÁ·Î±×·¥ÀÌ °è¼Ó ½ÇÇà)
-		  * public void ÇÔ¼ö ()
+		  * 1. try-catchë¬¸ì„ í†µí•´ì„œ (ì˜ˆì™¸ë°œìƒì‹œ í”„ë¡œê·¸ëž¨ ì¢…ë£Œ -> í”„ë¡œê·¸ëž¨ì´ ê³„ì† ì‹¤í–‰)
+		  * public void í•¨ìˆ˜ ()
 		  * {
 		  *    try
 		  *    {
-		  *     ½ÇÇà¹®
+		  *     ì‹¤í–‰ë¬¸
 		  *    }
-		  *     catch(¿¹¿ÜÅ¬·¡½º º¯¼ö¸í e) // ¿¹¿ÜÅ¬·¡½º¸íÀº ½ÇÇà¹®¿¡¼­ ¹ß»ý ¿¹Ãø °¡´ÉÇÑ ¿¹¿Ü
+		  *     catch(ì˜ˆì™¸í´ëž˜ìŠ¤ ë³€ìˆ˜ëª… e) // ì˜ˆì™¸í´ëž˜ìŠ¤ëª…ì€ ì‹¤í–‰ë¬¸ì—ì„œ ë°œìƒ ì˜ˆì¸¡ ê°€ëŠ¥í•œ ì˜ˆì™¸
 		  *    {
-		  *     À§ÀÇ ½ÇÇà¹®¿¡¼­ ¿¡·¯°¡ ¹ß»ýÇßÀ» °æ¿ì ½ÇÇàÇÒ ¹®ÀåÀ» ¼­¼ú
+		  *     ìœ„ì˜ ì‹¤í–‰ë¬¸ì—ì„œ ì—ëŸ¬ê°€ ë°œìƒí–ˆì„ ê²½ìš° ì‹¤í–‰í•  ë¬¸ìž¥ì„ ì„œìˆ 
 		  *    }
 		  * }
-		  * 2. throw¸¦ ÅëÇÑ ¿¹¿ÜÃ³¸® // ¿¡·¯ ³µÀ¸´Ï±î ´Ï°¡ ¾Ë¾Æ¼­ÇØ ÇÔ¼ö¸¦ È£ÃâÇÑ ³ðÇÑÅ× ´øÁö´Â°Í(¿¹¿Ü¸¦ º¸³»´Â°Í)
-		  *                   // ÆÀÇÃÀ» ÇÒ¶§ 
-		  * public void ÇÔ¼ö()
+		  * 2. throwë¥¼ í†µí•œ ì˜ˆì™¸ì²˜ë¦¬ // ì—ëŸ¬ ë‚¬ìœ¼ë‹ˆê¹Œ ë‹ˆê°€ ì•Œì•„ì„œí•´ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•œ ë†ˆí•œí…Œ ë˜ì§€ëŠ”ê²ƒ(ì˜ˆì™¸ë¥¼ ë³´ë‚´ëŠ”ê²ƒ)
+		  *                   // íŒ€í”Œì„ í• ë•Œ 
+		  * public void í•¨ìˆ˜()
 		  * {
-		  *   ½ÇÇà¹®: // ¿¹¿Ü ¹ß»ý½Ã Æ®¶óÀÌ Ä³Ä¡°¡ ¾Æ´Ï°í throw·Î ¿¹¿Ü¸¦ ³Ñ±ä´Ù
+		  *   ì‹¤í–‰ë¬¸: // ì˜ˆì™¸ ë°œìƒì‹œ íŠ¸ë¼ì´ ìºì¹˜ê°€ ì•„ë‹ˆê³  throwë¡œ ì˜ˆì™¸ë¥¼ ë„˜ê¸´ë‹¤
 		  * }
 		  * 
-		  * public static void main (String[] args) //¸ÞÀÎ ÇÔ¼ö¿¡¼­ ¿¹¿ÜÃ³¸®¸¦ ¹Þ¾Æ¼­ Á÷Á¢ ÇÏ´Â °Í
+		  * public static void main (String[] args) //ë©”ì¸ í•¨ìˆ˜ì—ì„œ ì˜ˆì™¸ì²˜ë¦¬ë¥¼ ë°›ì•„ì„œ ì§ì ‘ í•˜ëŠ” ê²ƒ
 		  * {
 		  * 
 		  *   try
 		  *    {
-		  *     ÇÔ¼ö¸í(): //¸ÞÀÎ¿¡¼­ À§ÀÇ ÇÔ¼ö¸¦ È£ÃâÇß´Ù°í ÇÒ¶§
+		  *     í•¨ìˆ˜ëª…(): //ë©”ì¸ì—ì„œ ìœ„ì˜ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí–ˆë‹¤ê³  í• ë•Œ
 		  *    }
-		  *     catch(¿¹¿ÜÅ¬·¡½º º¯¼ö¸í e)
+		  *     catch(ì˜ˆì™¸í´ëž˜ìŠ¤ ë³€ìˆ˜ëª… e)
 		  *    {
-		  *     À§ÀÇ ½ÇÇà¹®¿¡¼­ ¿¡·¯°¡ ¹ß»ýÇßÀ» °æ¿ì ½ÇÇàÇÒ ¹®ÀåÀ» ¼­¼ú
+		  *     ìœ„ì˜ ì‹¤í–‰ë¬¸ì—ì„œ ì—ëŸ¬ê°€ ë°œìƒí–ˆì„ ê²½ìš° ì‹¤í–‰í•  ë¬¸ìž¥ì„ ì„œìˆ 
 		  *    }
 		  *   
 		  * }

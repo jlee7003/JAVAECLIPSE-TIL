@@ -12,35 +12,35 @@ public class while_619
 	 member_DB mdb=new member_DB();
 	    Scanner sc=new Scanner(System.in);
 	 
-	 do //¸ÕÀú ½ÇÇàÈÄ µÚ¿¡ Á¶°ÇÀ» °Ë»öÇÔ,¹«Á¶°Ç ½ÇÇàÈÄ Á¶°ÇÀ» °Ë»ö
+	 do //ë¨¼ì € ì‹¤í–‰í›„ ë’¤ì— ì¡°ê±´ì„ ê²€ìƒ‰í•¨,ë¬´ì¡°ê±´ ì‹¤í–‰í›„ ì¡°ê±´ì„ ê²€ìƒ‰
 	 {
 		
 			/*int ch1=0;
 			int ch2=0;
-		 while(ch1!=0)//Á¶°Ç¿¡ µû¶ó ½ÇÇà
+		 while(ch1!=0)//ì¡°ê±´ì— ë”°ë¼ ì‹¤í–‰
 		 {
 			 System.out.println("while");
 		 }
 		 */
 			
 		    
-		 System.out.println("1. È¸¿øÃâ·ÂÇÏ±â");
-		 System.out.println("2. È¸¿øÀÔ·ÂÇÏ±â");
-		 System.out.println("3. È¸¿ø»èÁ¦ÇÏ±â");
-		 System.out.println("4. È¸¿ø¼öÁ¤ÇÏ±â");
-		 System.out.println("5. Á¾·áÇÏ±â");
+		 System.out.println("1. íšŒì›ì¶œë ¥í•˜ê¸°");
+		 System.out.println("2. íšŒì›ì…ë ¥í•˜ê¸°");
+		 System.out.println("3. íšŒì›ì‚­ì œí•˜ê¸°");
+		 System.out.println("4. íšŒì›ìˆ˜ì •í•˜ê¸°");
+		 System.out.println("5. ì¢…ë£Œí•˜ê¸°");
 		 
-		 System.out.print("ÀÔ·Â :");
+		 System.out.print("ì…ë ¥ :");
 		 ch2=sc.nextInt();
 		 
 		 switch(ch2)
 		 {
-		 case 1: mdb.select(); break;//Ãâ·Â¸Ş¼Òµå ½ÇÇà
-		 case 2: mdb.insert(); break;//ÀÔ·Â ¸Ş¼Òµå ½ÇÇà
-		 case 3: mdb.delete(); break;//»èÁ¦ ¸Ş¼Òµå ½ÇÇà
-		 case 4: mdb.update(); break;//¼öÁ¤ ¸Ş¼Òµå ½ÇÇà
+		 case 1: mdb.select(); break;//ì¶œë ¥ë©”ì†Œë“œ ì‹¤í–‰
+		 case 2: mdb.insert(); break;//ì…ë ¥ ë©”ì†Œë“œ ì‹¤í–‰
+		 case 3: mdb.delete(); break;//ì‚­ì œ ë©”ì†Œë“œ ì‹¤í–‰
+		 case 4: mdb.update(); break;//ìˆ˜ì • ë©”ì†Œë“œ ì‹¤í–‰
 		 }
-	 }while(ch2!=5);//5À» ´©¸£¸é Á¾·áµÊ ,5ÀÌ ¾Æ´Ï¶ó¸é ¹«ÇÑ ¹İº¹
+	 }while(ch2!=5);//5ì„ ëˆ„ë¥´ë©´ ì¢…ë£Œë¨ ,5ì´ ì•„ë‹ˆë¼ë©´ ë¬´í•œ ë°˜ë³µ
 
  }
  catch(Exception e)

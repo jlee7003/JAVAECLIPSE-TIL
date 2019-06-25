@@ -15,41 +15,41 @@ public class DB_UPDATE
 		Scanner sc=new Scanner(System.in);
 		Statement stmt=conn.createStatement();
 		
-		//.out.println("º¯°æÇÏ½Ç ÀÌ¸§¸íÀº ¹«¾ùÀÔ´Ï±î?");
+		//.out.println("ë³€ê²½í•˜ì‹¤ ì´ë¦„ëª…ì€ ë¬´ì—‡ì…ë‹ˆê¹Œ?");
 		// String b = sc.next();
-		//System.out.println("º¯°æÇÏ½Ç ÈŞ´ëÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+		//System.out.println("ë³€ê²½í•˜ì‹¤ íœ´ëŒ€ì „í™”ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
 		// String c = sc.next();
-		// System.out.println("º¯°æÇÏ½Ç ÁÖ¼Ò¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+		// System.out.println("ë³€ê²½í•˜ì‹¤ ì£¼ì†Œë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
 		// String a = sc.next();
-		 //System.out.println("º¯°æÇÏ½Ç ³ªÀÌ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+		 //System.out.println("ë³€ê²½í•˜ì‹¤ ë‚˜ì´ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
 		// String d = sc.next();
-		 System.out.println("º¯°æÇÏ½Ç ¾ÆÀÌµğ´Â ¹«¾ùÀÔ´Ï±î?");
+		 System.out.println("ë³€ê²½í•˜ì‹¤ ì•„ì´ë””ëŠ” ë¬´ì—‡ì…ë‹ˆê¹Œ?");
 		 int id = sc.nextInt();
-		 System.out.println("1:ÀÌ¸§/2:ÀüÈ­¹øÈ£/3:ÁÖ¼Ò/4:³ªÀÌ");
+		 System.out.println("1:ì´ë¦„/2:ì „í™”ë²ˆí˜¸/3:ì£¼ì†Œ/4:ë‚˜ì´");
 		 int ch = sc.nextInt();
-		 String ppp=""; //sql¿¡¼­ ¿À·ù°¡ ³ª±â¿¡ ""À¸·Î ÀÏ´Ü °ªÀ» Áà¾ßÇÔ
+		 String ppp=""; //sqlì—ì„œ ì˜¤ë¥˜ê°€ ë‚˜ê¸°ì— ""ìœ¼ë¡œ ì¼ë‹¨ ê°’ì„ ì¤˜ì•¼í•¨
 		 switch(ch)
 		 {
-		  case 1:System.out.print("º¯°æÇÏ½Ç ÀÌ¸§ °ªÀ» ÀÔ·ÂÇÏ½Ã¿À");
+		  case 1:System.out.print("ë³€ê²½í•˜ì‹¤ ì´ë¦„ ê°’ì„ ì…ë ¥í•˜ì‹œì˜¤");
 			  String b = sc.next();
 			  ppp="name='"+b+"'"; break;
-		  case 2:System.out.print("º¯°æÇÏ½Ç ÀüÈ­ °ªÀ» ÀÔ·ÂÇÏ½Ã¿À");
+		  case 2:System.out.print("ë³€ê²½í•˜ì‹¤ ì „í™” ê°’ì„ ì…ë ¥í•˜ì‹œì˜¤");
 			  String c = sc.next();
 			  ppp="phone='"+c+"'"; break;
-		  case 3:System.out.print("º¯°æÇÏ½Ç ÁÖ¼Ò °ªÀ» ÀÔ·ÂÇÏ½Ã¿À");
+		  case 3:System.out.print("ë³€ê²½í•˜ì‹¤ ì£¼ì†Œ ê°’ì„ ì…ë ¥í•˜ì‹œì˜¤");
 			  String a = sc.next();
 			  ppp="juso='"+a+"'"; break;
-		  case 4:System.out.print("º¯°æÇÏ½Ç ³ªÀÌ °ªÀ» ÀÔ·ÂÇÏ½Ã¿À");
+		  case 4:System.out.print("ë³€ê²½í•˜ì‹¤ ë‚˜ì´ ê°’ì„ ì…ë ¥í•˜ì‹œì˜¤");
 			  String d = sc.next();
 			  ppp="age='"+d+"'"; break;
 		 }
 		//String sql="update guest set name='"+b+"',phone='"+c+"',juso='"+a+"',age='"+d+"'  where id="+id;
 		String sql="update member set "+ppp+"where id="+id;
-		//"String ppp="name='È«±æµ¿'";
+		//"String ppp="name='í™ê¸¸ë™'";
 		stmt.executeUpdate(sql);
-		System.out.println("ÀÔ·ÂÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
-		stmt.close();//µ¥ÀÌÅÍ Ä¿³Ø¼ÇÀ» ´İ¾ÆÁÖ±â À§ÇÑ ¸í·É¾î
-		conn.close();//µ¥ÀÌÅÍ Ä¿³Ø¼ÇÀ» ´İ¾ÆÁÖ±â À§ÇÑ ¸í·É¾î
+		System.out.println("ì…ë ¥ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
+		stmt.close();//ë°ì´í„° ì»¤ë„¥ì…˜ì„ ë‹«ì•„ì£¼ê¸° ìœ„í•œ ëª…ë ¹ì–´
+		conn.close();//ë°ì´í„° ì»¤ë„¥ì…˜ì„ ë‹«ì•„ì£¼ê¸° ìœ„í•œ ëª…ë ¹ì–´
 
 	}
 

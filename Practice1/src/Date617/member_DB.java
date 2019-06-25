@@ -7,15 +7,15 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
-public class member_DB //member Å×ÀÌºí°úÀÇ °Ë»ö ,ÀÔ·Â ,»èÁ¦ ,¼öÁ¤
+public class member_DB //member í…Œì´ë¸”ê³¼ì˜ ê²€ìƒ‰ ,ìž…ë ¥ ,ì‚­ì œ ,ìˆ˜ì •
 {
 	Connection conn;
-	Statement stmt; //¼Ó¼ºÀ» Àû´Â °÷¿¡ ±â´ÉÀ» Àû¾îÁà¼­ ¿À·ù°¡ ³­°Í ¼Ó¼º¿¡´Â ¾î¶°ÇÑ °ª¸¸ µé¾î°¡¾ßÇÑ´Ù. 
-	                //±×·¯¹Ç·Î °´Ã¼¸¦ ¸¸µé¾î »ý¼ºÀÚ·Î È°¿ë
+	Statement stmt; //ì†ì„±ì„ ì ëŠ” ê³³ì— ê¸°ëŠ¥ì„ ì ì–´ì¤˜ì„œ ì˜¤ë¥˜ê°€ ë‚œê²ƒ ì†ì„±ì—ëŠ” ì–´ë– í•œ ê°’ë§Œ ë“¤ì–´ê°€ì•¼í•œë‹¤. 
+	                //ê·¸ëŸ¬ë¯€ë¡œ ê°ì²´ë¥¼ ë§Œë“¤ì–´ ìƒì„±ìžë¡œ í™œìš©
 		Scanner sc;
 		
 		
-member_DB() throws SQLException //°´Ã¼º¯¼ö»ý¼ºÀº »ý¼ºÀÚ¸¦ ÅëÇÏ¿© ¸¸µë
+member_DB() throws SQLException //ê°ì²´ë³€ìˆ˜ìƒì„±ì€ ìƒì„±ìžë¥¼ í†µí•˜ì—¬ ë§Œë“¬
 {
 	conn= DriverManager.getConnection("jdbc:mysql://localhost:3307/java?useSSL=false","root","1234");
 	stmt=conn.createStatement();
@@ -24,19 +24,19 @@ member_DB() throws SQLException //°´Ã¼º¯¼ö»ý¼ºÀº »ý¼ºÀÚ¸¦ ÅëÇÏ¿© ¸¸µë
 }
   public void insert() throws SQLException
   {
-	     System.out.print("ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä :");
+	     System.out.print("ì´ë¦„ì„ ìž…ë ¥í•´ì£¼ì„¸ìš” :");
 		 String nameI = sc.next();
-		//sc.nextLine();-> ºñ¾îÀÖ´Â °ªÀÌ ÀÖÀ» °æ¿ì ÀÔ·Â
-		 System.out.print("ÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä :");
+		//sc.nextLine();-> ë¹„ì–´ìžˆëŠ” ê°’ì´ ìžˆì„ ê²½ìš° ìž…ë ¥
+		 System.out.print("ì „í™”ë²ˆí˜¸ë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš” :");
 		 String phoneI= sc.next();
 		
-		 System.out.print("ÁÖ¼Ò¸¦ ³Ö¾îÁÖ¼¼¿ä :");
+		 System.out.print("ì£¼ì†Œë¥¼ ë„£ì–´ì£¼ì„¸ìš” :");
 		 String jusoI = sc.next();
-		 System.out.print("³ªÀÌ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä :");
+		 System.out.print("ë‚˜ì´ë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš” :");
 		 int ageI = sc.nextInt();
 		 String sql="insert into member(name, phone, age, juso) values('"+nameI+"','"+phoneI+"',"+ageI+",'"+jusoI+"')";
 		 
-		 System.out.println("ÀÔ·ÂÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+		 System.out.println("ìž…ë ¥ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 				 
 		 stmt.executeUpdate(sql);
   }
@@ -44,15 +44,15 @@ member_DB() throws SQLException //°´Ã¼º¯¼ö»ý¼ºÀº »ý¼ºÀÚ¸¦ ÅëÇÏ¿© ¸¸µë
   {
 	  String sql="select * from member";
 		
-		ResultSet rs; // Å×ÀÌºí³»¿ëÀ» ÀÐ¾î¿Í¼­ ÀúÀåÇÒ °ø°£
-		rs=stmt.executeQuery(sql);//select ¸í·ÉÀ» ½ÇÇàÇÑ °á°ú°ªÀ» rs¿¡ ÀúÀå ,Ç×¸ñÀ¸·Î ºÒ·¯¾ßÇÔ
-		rs.last(); //rs°´Ã¼ÀÇ °¡Àå ³¡À¸·Î ÀÌµ¿
+		ResultSet rs; // í…Œì´ë¸”ë‚´ìš©ì„ ì½ì–´ì™€ì„œ ì €ìž¥í•  ê³µê°„
+		rs=stmt.executeQuery(sql);//select ëª…ë ¹ì„ ì‹¤í–‰í•œ ê²°ê³¼ê°’ì„ rsì— ì €ìž¥ ,í•­ëª©ìœ¼ë¡œ ë¶ˆëŸ¬ì•¼í•¨
+		rs.last(); //rsê°ì²´ì˜ ê°€ìž¥ ëìœ¼ë¡œ ì´ë™
 		//first, beforefirst
-		int len=rs.getRow(); //·¹ÄÚµåÀÇ °¹¼ö¸¦ len º¯¼ö¿¡ ÀúÀå
-		rs.first();//rs.last(); ->·¹ÄÚµå Æ÷ÀÎÆ®¸¦ ¸¶Áö¸· ·¹ÄÚµåÇàÀ¸·Î ÁöÁ¤ 
-		//ÀÌ¸§,ÀüÈ­¹øÈ£,³ªÀÌ,ÁÖ¼Ò ÀüºÎ Ãâ·ÂÇÏ±â;
+		int len=rs.getRow(); //ë ˆì½”ë“œì˜ ê°¯ìˆ˜ë¥¼ len ë³€ìˆ˜ì— ì €ìž¥
+		rs.first();//rs.last(); ->ë ˆì½”ë“œ í¬ì¸íŠ¸ë¥¼ ë§ˆì§€ë§‰ ë ˆì½”ë“œí–‰ìœ¼ë¡œ ì§€ì • 
+		//ì´ë¦„,ì „í™”ë²ˆí˜¸,ë‚˜ì´,ì£¼ì†Œ ì „ë¶€ ì¶œë ¥í•˜ê¸°;
 	    // System.out.Printf("%10s",rs.getString("name"));
-		                     //10Ä­ Â¥¸® ¹®ÀÚ¿­·Î Ãâ·ÂÇÏ¶ó %´Â s°¡ ¹®ÀÚ¿­ÀÓÀ» Ç¥Çö
+		                     //10ì¹¸ ì§œë¦¬ ë¬¸ìžì—´ë¡œ ì¶œë ¥í•˜ë¼ %ëŠ” sê°€ ë¬¸ìžì—´ìž„ì„ í‘œí˜„
 		for(int i=1;i<=len;i++)
 		{
 		System.out.printf("%15s",rs.getString("id"));
@@ -70,23 +70,23 @@ member_DB() throws SQLException //°´Ã¼º¯¼ö»ý¼ºÀº »ý¼ºÀÚ¸¦ ÅëÇÏ¿© ¸¸µë
   }
   public void update() throws SQLException
   {
-	  System.out.println("º¯°æÇÏ½Ç ¾ÆÀÌµð´Â ¹«¾ùÀÔ´Ï±î?");
+	  System.out.println("ë³€ê²½í•˜ì‹¤ ì•„ì´ë””ëŠ” ë¬´ì—‡ìž…ë‹ˆê¹Œ?");
 		 int id = sc.nextInt();
-		 System.out.println("1:ÀÌ¸§/2:ÀüÈ­¹øÈ£/3:ÁÖ¼Ò/4:³ªÀÌ");
+		 System.out.println("1:ì´ë¦„/2:ì „í™”ë²ˆí˜¸/3:ì£¼ì†Œ/4:ë‚˜ì´");
 		 int ch = sc.nextInt();
-		 String ppp=""; //sql¿¡¼­ ¿À·ù°¡ ³ª±â¿¡ ""À¸·Î ÀÏ´Ü °ªÀ» Áà¾ßÇÔ
+		 String ppp=""; //sqlì—ì„œ ì˜¤ë¥˜ê°€ ë‚˜ê¸°ì— ""ìœ¼ë¡œ ì¼ë‹¨ ê°’ì„ ì¤˜ì•¼í•¨
 		 switch(ch)
 		 {
-		  case 1:System.out.print("º¯°æÇÏ½Ç ÀÌ¸§ °ªÀ» ÀÔ·ÂÇÏ½Ã¿À :");
+		  case 1:System.out.print("ë³€ê²½í•˜ì‹¤ ì´ë¦„ ê°’ì„ ìž…ë ¥í•˜ì‹œì˜¤ :");
 			  String b = sc.next();
 			  ppp="name='"+b+"'"; break;
-		  case 2:System.out.print("º¯°æÇÏ½Ç ÀüÈ­ °ªÀ» ÀÔ·ÂÇÏ½Ã¿À :");
+		  case 2:System.out.print("ë³€ê²½í•˜ì‹¤ ì „í™” ê°’ì„ ìž…ë ¥í•˜ì‹œì˜¤ :");
 			  String c = sc.next();
 			  ppp="phone='"+c+"'"; break;
-		  case 3:System.out.print("º¯°æÇÏ½Ç ÁÖ¼Ò °ªÀ» ÀÔ·ÂÇÏ½Ã¿À :");
+		  case 3:System.out.print("ë³€ê²½í•˜ì‹¤ ì£¼ì†Œ ê°’ì„ ìž…ë ¥í•˜ì‹œì˜¤ :");
 			  String a = sc.next();
 			  ppp="juso='"+a+"'"; break;
-		  case 4:System.out.print("º¯°æÇÏ½Ç ³ªÀÌ °ªÀ» ÀÔ·ÂÇÏ½Ã¿À :");
+		  case 4:System.out.print("ë³€ê²½í•˜ì‹¤ ë‚˜ì´ ê°’ì„ ìž…ë ¥í•˜ì‹œì˜¤ :");
 			  String d = sc.next();
 			  ppp="age="+d;
 			  
@@ -97,12 +97,12 @@ member_DB() throws SQLException //°´Ã¼º¯¼ö»ý¼ºÀº »ý¼ºÀÚ¸¦ ÅëÇÏ¿© ¸¸µë
   }
   public void delete() throws SQLException
   {
-	  System.out.print("¸î¹ø ·¹ÄÚµå¸¦ Áö¿ï²«°¡¿ä? :");
+	  System.out.print("ëª‡ë²ˆ ë ˆì½”ë“œë¥¼ ì§€ìš¸ê»€ê°€ìš”? :");
 		 String IDI = sc.next();
 				 
 		 String sql="delete from member where id='"+IDI+"'";
 		 
-		 System.out.println("ÀÔ·ÂÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+		 System.out.println("ìž…ë ¥ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 		 
 		 stmt.executeUpdate(sql);
   }

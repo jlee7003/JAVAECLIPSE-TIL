@@ -11,25 +11,25 @@ public class DB_INPUT
 		 Statement stmt=conn.createStatement();
 			 
 		 Scanner sc=new Scanner(System.in);
-		 System.out.print("ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä :");
+		 System.out.print("ì´ë¦„ì„ ì…ë ¥í•´ì£¼ì„¸ìš” :");
 		 String nameI = sc.next();
-		//sc.nextLine();-> ºñ¾îÀÖ´Â °ªÀÌ ÀÖÀ» °æ¿ì ÀÔ·Â
-		 System.out.print("ÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä :");
+		//sc.nextLine();-> ë¹„ì–´ìˆëŠ” ê°’ì´ ìˆì„ ê²½ìš° ì…ë ¥
+		 System.out.print("ì „í™”ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” :");
 		 String phoneI= sc.next();
 		
-		 System.out.print("ÁÖ¼Ò¸¦ ³Ö¾îÁÖ¼¼¿ä :");
+		 System.out.print("ì£¼ì†Œë¥¼ ë„£ì–´ì£¼ì„¸ìš” :");
 		 String jusoI = sc.next();
-		 System.out.print("³ªÀÌ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä :");
+		 System.out.print("ë‚˜ì´ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” :");
 		 int ageI = sc.nextInt();
 		 String sql="insert into member(name, phone, age, juso) values('"+nameI+"','"+phoneI+"',"+ageI+",'"+jusoI+"')";
 		 
-		 System.out.println("ÀÔ·ÂÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+		 System.out.println("ì…ë ¥ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 		
 		 
 		 
 		 stmt.executeUpdate(sql);
 		 
-		 stmt.close();//µ¥ÀÌÅÍ Ä¿³Ø¼ÇÀ» ´İ¾ÆÁÖ±â À§ÇÑ ¸í·É¾î
+		 stmt.close();//ë°ì´í„° ì»¤ë„¥ì…˜ì„ ë‹«ì•„ì£¼ê¸° ìœ„í•œ ëª…ë ¹ì–´
 		 conn.close();
 	}
 	

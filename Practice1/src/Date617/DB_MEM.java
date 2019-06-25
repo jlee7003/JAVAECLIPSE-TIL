@@ -1,3 +1,4 @@
+
 package Date617;
 
 import java.sql.Connection;
@@ -7,29 +8,29 @@ import java.sql.Statement;
 
 public class DB_MEM 
 {
-	/*Å¬·¡½º¿¡¼­ ¼±¾ğÇÑ º¯¼ö¿Í ÇÔ¼ö¿¡¼­ ¼±¾ğÇÑ ¶È°°Àº ÀÌ¸§ÀÇ º¯¼ö´Â ´Ù¸¥ º¯¼öÀÓ
-	->ÇÔ¼ö´Â °¡±î¿î º¯¼ö ºÎÅÍ Ã£°Ô µÊ ¸¸¾à °°Àº °ø°£¿¡ º¯¼ö°¡ ¾ø´Ù¸é ¹ÛÀÇ º¯¼ö¸¦ °¡Á®¿À°Ô µÊ 
-	 Áö¿ªº¯¼ö(ÇÔ¼ö ¾È),Àü¿ªº¯¼ö(ÇÔ¼ö ¹Û)*/
-	//Å¬·¡½º´Â ¼Ó¼º°ú ¸Ş¼Òµå·Î ±¸¼º µÇ¾îÀÖ´Ù.
-	//¿ÜºÎ¿¡¼­ ÀÔ·ÂµÈ ÀÌ¸§,ÀüÈ­¹øÈ£,³ªÀÌ¸¦ °¡Á®¿Í¼­
-	//name char(10) not null -> name °ªÀ» ÇÊ¼ö·Î
-	Connection conn;//ÇÁ·Î±×·¡¹Ö¾ğ¾î¿Í DB¼­¹öÀÇ ¿¬°á 
-	Statement stmt;// DB¼­¹ö¿¡ Äõ¸®¸¦ ½ÇÇàÇÒ Å¬·¡½º
+	/*í´ë˜ìŠ¤ì—ì„œ ì„ ì–¸í•œ ë³€ìˆ˜ì™€ í•¨ìˆ˜ì—ì„œ ì„ ì–¸í•œ ë˜‘ê°™ì€ ì´ë¦„ì˜ ë³€ìˆ˜ëŠ” ë‹¤ë¥¸ ë³€ìˆ˜ì„
+	->í•¨ìˆ˜ëŠ” ê°€ê¹Œìš´ ë³€ìˆ˜ ë¶€í„° ì°¾ê²Œ ë¨ ë§Œì•½ ê°™ì€ ê³µê°„ì— ë³€ìˆ˜ê°€ ì—†ë‹¤ë©´ ë°–ì˜ ë³€ìˆ˜ë¥¼ ê°€ì ¸ì˜¤ê²Œ ë¨ 
+	 ì§€ì—­ë³€ìˆ˜(í•¨ìˆ˜ ì•ˆ),ì „ì—­ë³€ìˆ˜(í•¨ìˆ˜ ë°–)*/
+	//í´ë˜ìŠ¤ëŠ” ì†ì„±ê³¼ ë©”ì†Œë“œë¡œ êµ¬ì„± ë˜ì–´ìˆë‹¤.
+	//ì™¸ë¶€ì—ì„œ ì…ë ¥ëœ ì´ë¦„,ì „í™”ë²ˆí˜¸,ë‚˜ì´ë¥¼ ê°€ì ¸ì™€ì„œ
+	//name char(10) not null -> name ê°’ì„ í•„ìˆ˜ë¡œ
+	Connection conn;//í”„ë¡œê·¸ë˜ë°ì–¸ì–´ì™€ DBì„œë²„ì˜ ì—°ê²° 
+	Statement stmt;// DBì„œë²„ì— ì¿¼ë¦¬ë¥¼ ì‹¤í–‰í•  í´ë˜ìŠ¤
 	
 	
 	DB_MEM() throws SQLException
 	{//connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3307/java?useSSL=false","root","1234");
-	  //-> ÀÌ·¸°Ô ÇÏ¸é Áö¿ªº¯¼ö°¡ µÇ¾î ¿ø·¡ÀÇ connectionÀÌ ÃÊ±âÈ­µÇ¾î java.lang.NullPointerException error°¡ ¹ß»ıÇÑ´Ù.
+	  //-> ì´ë ‡ê²Œ í•˜ë©´ ì§€ì—­ë³€ìˆ˜ê°€ ë˜ì–´ ì›ë˜ì˜ connectionì´ ì´ˆê¸°í™”ë˜ì–´ java.lang.NullPointerException errorê°€ ë°œìƒí•œë‹¤.
 		conn= DriverManager.getConnection("jdbc:mysql://localhost:3307/java?useSSL=false","root","1234");
 	 stmt=conn.createStatement();
 	}
 
 
 	 public void insert(String name,String phone,int age) throws SQLException
-	  { //ÀÔ·ÂµÈ °ªÀ» member2 Å×ÀÌºí¿¡ ÀúÀå
+	  { //ì…ë ¥ëœ ê°’ì„ member2 í…Œì´ë¸”ì— ì €ì¥
          String sql="insert into member2(name, phone, age) values('"+name+"','"+phone+"',"+age+")";
 		 
-		 System.out.println("ÀÔ·ÂÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+		 System.out.println("ì…ë ¥ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 				 
 		 stmt.executeUpdate(sql);
       }
@@ -37,13 +38,13 @@ public class DB_MEM
 	 
 
 	 public void insert(String name,String phone,int age,String juso) throws SQLException
-	  { //ÀÔ·ÂµÈ °ªÀ» member2 Å×ÀÌºí¿¡ ÀúÀå
+	  { //ì…ë ¥ëœ ê°’ì„ member2 í…Œì´ë¸”ì— ì €ì¥
 	 String sql="insert into member(name, phone, age, juso) values('"+name+"','"+phone+"',"+age+",'"+juso+"')";
 	 
-	 System.out.println("ÀÔ·ÂÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+	 System.out.println("ì…ë ¥ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 			 
 	 stmt.executeUpdate(sql);
 	  }
-	 //¸Å°³º¯¼ö°¡ 4°³¶ó¸é member table¿¡ °ªÀ» ³Ö´Â ¸Ş¼Òµå¸¦ ¸¸µé¾î¶ó
+	 //ë§¤ê°œë³€ìˆ˜ê°€ 4ê°œë¼ë©´ member tableì— ê°’ì„ ë„£ëŠ” ë©”ì†Œë“œë¥¼ ë§Œë“¤ì–´ë¼
 	 
 }

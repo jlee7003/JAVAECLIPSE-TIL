@@ -13,16 +13,16 @@ public class DB_DELETE
 		 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/java?useSSL=false","root","1234");
 		 Scanner sc=new Scanner(System.in);
 		 Statement stmt=conn.createStatement();
-		 System.out.print("¸î¹ø ·¹ÄÚµå¸¦ Áö¿ï²«°¡¿ä? :");
+		 System.out.print("ëª‡ë²ˆ ë ˆì½”ë“œë¥¼ ì§€ìš¸ê»€ê°€ìš”? :");
 		 String IDI = sc.next();
 				 
 		 String sql="delete from member where id='"+IDI+"'";
 		 
-		 System.out.println("ÀÔ·ÂÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+		 System.out.println("ì…ë ¥ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 		 
 		 stmt.executeUpdate(sql);
 		 
-		 stmt.close();//µ¥ÀÌÅÍ Ä¿³Ø¼ÇÀ» ´İ¾ÆÁÖ±â À§ÇÑ ¸í·É¾î
+		 stmt.close();//ë°ì´í„° ì»¤ë„¥ì…˜ì„ ë‹«ì•„ì£¼ê¸° ìœ„í•œ ëª…ë ¹ì–´
 		 conn.close();
 	}
 	

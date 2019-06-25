@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class DB_SELECT¹Ì¿Ï 
+public class DB_SELECTë¯¸ì™„ 
 {
 
 	public static void main(String[] args) throws SQLException
@@ -19,15 +19,15 @@ public class DB_SELECT¹Ì¿Ï
 
 		String sql="select * from member";
 		
-		ResultSet rs; // Å×ÀÌºí³»¿ëÀ» ÀÐ¾î¿Í¼­ ÀúÀåÇÒ °ø°£
-		rs=stmt.executeQuery(sql);//select ¸í·ÉÀ» ½ÇÇàÇÑ °á°ú°ªÀ» rs¿¡ ÀúÀå ,Ç×¸ñÀ¸·Î ºÒ·¯¾ßÇÔ
-		rs.last(); //rs°´Ã¼ÀÇ °¡Àå ³¡À¸·Î ÀÌµ¿
+		ResultSet rs; // í…Œì´ë¸”ë‚´ìš©ì„ ì½ì–´ì™€ì„œ ì €ìž¥í•  ê³µê°„
+		rs=stmt.executeQuery(sql);//select ëª…ë ¹ì„ ì‹¤í–‰í•œ ê²°ê³¼ê°’ì„ rsì— ì €ìž¥ ,í•­ëª©ìœ¼ë¡œ ë¶ˆëŸ¬ì•¼í•¨
+		rs.last(); //rsê°ì²´ì˜ ê°€ìž¥ ëìœ¼ë¡œ ì´ë™
 		//first, beforefirst
-		int len=rs.getRow(); //·¹ÄÚµåÀÇ °¹¼ö¸¦ len º¯¼ö¿¡ ÀúÀå
-		rs.first();//rs.last(); ->·¹ÄÚµå Æ÷ÀÎÆ®¸¦ ¸¶Áö¸· ·¹ÄÚµåÇàÀ¸·Î ÁöÁ¤ 
-		//ÀÌ¸§,ÀüÈ­¹øÈ£,³ªÀÌ,ÁÖ¼Ò ÀüºÎ Ãâ·ÂÇÏ±â;
+		int len=rs.getRow(); //ë ˆì½”ë“œì˜ ê°¯ìˆ˜ë¥¼ len ë³€ìˆ˜ì— ì €ìž¥
+		rs.first();//rs.last(); ->ë ˆì½”ë“œ í¬ì¸íŠ¸ë¥¼ ë§ˆì§€ë§‰ ë ˆì½”ë“œí–‰ìœ¼ë¡œ ì§€ì • 
+		//ì´ë¦„,ì „í™”ë²ˆí˜¸,ë‚˜ì´,ì£¼ì†Œ ì „ë¶€ ì¶œë ¥í•˜ê¸°;
 	    // System.out.Printf("%10s",rs.getString("name"));
-		                     //10Ä­ Â¥¸® ¹®ÀÚ¿­·Î Ãâ·ÂÇÏ¶ó %´Â s°¡ ¹®ÀÚ¿­ÀÓÀ» Ç¥Çö
+		                     //10ì¹¸ ì§œë¦¬ ë¬¸ìžì—´ë¡œ ì¶œë ¥í•˜ë¼ %ëŠ” sê°€ ë¬¸ìžì—´ìž„ì„ í‘œí˜„
 		for(int i=1;i<=len;i++)
 		{
 		System.out.printf("%15s",rs.getString("id"));
@@ -48,8 +48,8 @@ public class DB_SELECT¹Ì¿Ï
 		
 		
 		
-		stmt.close();//µ¥ÀÌÅÍ Ä¿³Ø¼ÇÀ» ´Ý¾ÆÁÖ±â À§ÇÑ ¸í·É¾î
-		conn.close();//µ¥ÀÌÅÍ Ä¿³Ø¼ÇÀ» ´Ý¾ÆÁÖ±â À§ÇÑ ¸í·É¾î
+		stmt.close();//ë°ì´í„° ì»¤ë„¥ì…˜ì„ ë‹«ì•„ì£¼ê¸° ìœ„í•œ ëª…ë ¹ì–´
+		conn.close();//ë°ì´í„° ì»¤ë„¥ì…˜ì„ ë‹«ì•„ì£¼ê¸° ìœ„í•œ ëª…ë ¹ì–´
 		
 	}
 
