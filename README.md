@@ -90,3 +90,22 @@
 <h2>·break,continue, Date class, calender class, random class</h2> <p>
   
 <h2>·SimpleDate, SimpleDateFormet class(날짜형식), TimeZone class</h2> <p>
+	
+<h2> 전역변수, 지역변수 </h2><p>
+	
+     ->같은 클래스 안에서 함수를 만들고 클래스 안에 변수를 만들었을때 위치에 따라 변수의 값이 정해지는 것 
+       ex) public class exex
+            {
+	      int prac;
+	      
+	      public void input()
+	      {
+	       int prac; <- 지역변수: 함수내에서 변수가 선언되어 변수에 가장 가까운 값을 대입하게 됌
+	       prac=140;
+	      }
+	      
+	      public void output()
+	      {
+	       prac=100; <- 변수가 함수내에 없으므로 클래스 변수로 가서 값을 찾음
+	      }
+	    }
