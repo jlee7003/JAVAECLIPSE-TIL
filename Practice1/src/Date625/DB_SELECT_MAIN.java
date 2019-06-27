@@ -39,7 +39,10 @@ public class DB_SELECT_MAIN
 		   case 4: aa.juso_chul();  break;
 		   case 5: aa.insert(); break;
 		   case 6: aa.delete(); break;
-		   case 7: aa.search(); break;
+		   case 7: aa.search(); 
+				  
+				   break;
+		   
 		   //default://case 이외의 값이 들어오게 된 경우
 		   }
 		   

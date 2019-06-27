@@ -47,6 +47,7 @@ public class DB_SELECT
 	 rs=stmt.executeQuery(sql);
 	 while(rs.next()) //rs.next()는 다음레코드 이동=> 다음레코드 있으면 true 없으면 false;
      {
+	   System.out.printf("%10s",rs.getString("id"));
 	   System.out.printf("%10s",rs.getString("name"));
 	   System.out.printf("%15s",rs.getString("phone"));
 	   System.out.printf("%10s",rs.getString("age"));
@@ -56,6 +57,7 @@ public class DB_SELECT
    }
    public void phone_chul() throws SQLException
    {
+	   
 	   System.out.println("-번호검색-");
 	   System.out.println("검색할 전화번호를 입력하십시오");
 	   String search=sc.next();
@@ -63,6 +65,7 @@ public class DB_SELECT
 	 rs=stmt.executeQuery(sql);
 	 while(rs.next()) //rs.next()는 다음레코드 이동=> 다음레코드 있으면 true 없으면 false;
      {
+		 System.out.printf("%10s",rs.getString("id")); 
 	   System.out.printf("%10s",rs.getString("name"));
 	   System.out.printf("%15s",rs.getString("phone"));
 	   System.out.printf("%10s",rs.getString("age"));
@@ -80,6 +83,7 @@ public class DB_SELECT
 	 rs=stmt.executeQuery(sql);
 	 while(rs.next()) //rs.next()는 다음레코드 이동=> 다음레코드 있으면 true 없으면 false;
      {
+		 System.out.printf("%10s",rs.getString("id")); 
 	   System.out.printf("%10s",rs.getString("name"));
 	   System.out.printf("%15s",rs.getString("phone"));
 	   System.out.printf("%10s",rs.getString("age"));
@@ -127,6 +131,7 @@ public class DB_SELECT
 		 rs=stmt.executeQuery(sql);
 		 while(rs.next()) //rs.next()는 다음레코드 이동=> 다음레코드 있으면 true 없으면 false;
 	     {
+			 System.out.printf("%10s",rs.getString("id"));
 		   System.out.printf("%10s",rs.getString("name"));
 		   System.out.printf("%15s",rs.getString("phone"));
 		   System.out.printf("%10s",rs.getString("age"));

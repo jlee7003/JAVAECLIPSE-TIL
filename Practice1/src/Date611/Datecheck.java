@@ -8,18 +8,18 @@ public class Datecheck {
 	{
 		LocalDateTime today=LocalDateTime.now();
 		
-		//plus ¸»°íµµ minus°¡ Á¸ÀçÇÑ´Ù.
-		//LocalDateTime xday=today.plusYears(10); //¿À´ÃÀ» ±âÁØÀ¸·Î ³âµµ¿¡ 10À» ´õÇÏ´Â°Í
-		//LocalDateTime xday=today.plusMonths(10);  //¿À´ÃÀ» ±âÁØÀ¸·Î 10°³¿ùÀ» ´õÇÑ °Í 
-		//LocalDateTime xday=today.plusDays(1000);  //¿À´ÃÀ»±âÁØÀ¸·Î 1000ÀÏÀ» ´õÇÑ°Í
-		//LocalDateTime xday=today.plusHours(1000);  //...
-		//LocalDateTime xday=today.plusMinutes(1000);
-		//LocalDateTime xday=today.plusSeconds(1000);
+		plus ï¿½ï¿½ï¿½ï¿½ minusï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+		LocalDateTime xday=today.plusYears(10); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½âµµï¿½ï¿½ 10ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´Â°ï¿½
+		LocalDateTime xday=today.plusMonths(10);  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 10ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ 
+		LocalDateTime xday=today.plusDays(1000);  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1000ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ñ°ï¿½
+		LocalDateTime xday=today.plusHours(1000);  //...
+		LocalDateTime xday=today.plusMinutes(1000);
+		LocalDateTime xday=today.plusSeconds(1000);
   		int y=xday.getYear();
 		int m=xday.getMonthValue();
 		int d=xday.getDayOfMonth();
 		
-		System.out.println(y+"³â"+m+"¿ù"+d+"ÀÏ");
+		System.out.println(y+"ï¿½ï¿½"+m+"ï¿½ï¿½"+d+"ï¿½ï¿½");
 		
 		
 		
