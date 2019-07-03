@@ -14,7 +14,9 @@ public class Component_Main {
 		//Radio_class rc=new Radio_class();
 		//fFlowLayout flo=new fFlowLayout();
 		//girdlayout glo=new girdlayout();
-		windowFrame wf=new windowFrame();
+		//windowFrame wf=new windowFrame();
+		TextAreaclass tac=new TextAreaclass();
+		
 	}
 
 }
