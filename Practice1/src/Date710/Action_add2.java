@@ -64,7 +64,6 @@ public class Action_add2 extends JFrame implements ActionListener {// 입력박�
 				imsi = n1 - n2;
 			else if (ob == btn4)
 			{
-				
 				for(int i=n1;i<n2;i++)
 				{
 				n1=n1+1;
