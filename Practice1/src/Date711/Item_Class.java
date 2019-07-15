@@ -17,11 +17,11 @@ public class Item_Class extends JFrame implements ItemListener
     	this.setLayout(new FlowLayout());
     	
     	// ch�� �׸��߰�
-    	ch.add("¥���");
-    	ch.add("�쵿");
-    	ch.add("������");
-    	ch.add("�Ⱥ�ä");
-    	ch.add("������");
+    	ch.add("1");
+    	ch.add("2");
+    	ch.add("3");
+    	ch.add("4");
+    	ch.add("5");
     	ch.addItemListener(this);
     	add(ch);
     }

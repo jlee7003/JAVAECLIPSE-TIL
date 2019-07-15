@@ -22,6 +22,7 @@ public class Item_ClassM extends JFrame implements ItemListener{
 		ch.add("우동");
 		ch.add("콩국수");
 		ch.add("라조기");
+		
 		ch.addItemListener(this);
 		add(ch);
 	}
