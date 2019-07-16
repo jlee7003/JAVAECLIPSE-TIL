@@ -5,10 +5,10 @@ public class split
 
 	public static void main(String[] args) 
 	{
-		String str="È«±æµ¿,½´ÆÛ¸Ç,¹èÆ®¸Ç,¿ø/´õ=¿ì¸Õ";
+		String str="ì•ˆë…•í•˜ì„¸ìš”";
 		
-		String[] name=str.split(",|/|="); //Â¦´ë±â·Î ³ª´­¼ö ÀÖÀ½
-		//StringÀº Å¬·¡½º ÀÌ¹Ç·Î ¸Þ¼Òµå¸¦ °¡Áö°í ÀÌ¾¾´Ù
+		String[] name=str.split(""); //Â¦ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		//Stringï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹Ç·ï¿½ ï¿½Þ¼Òµå¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¾ï¿½ï¿½ï¿½
 		
 		for(int i=0;i<name.length;i++)
 		System.out.println(name[i]);
