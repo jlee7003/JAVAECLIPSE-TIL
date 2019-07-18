@@ -10,6 +10,7 @@ public class Q2 {
 		{
 		num=num+1;
 		Arr1[i]=num;
+		if(Arr[i]!=)
 			System.out.println(Arr1[i]);	
 
 		}
